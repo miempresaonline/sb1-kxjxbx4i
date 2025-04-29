@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Award, Ban as Bank, Clock, Shield, ThumbsUp, Truck } from 'lucide-react';
 
 const benefits = [
@@ -24,7 +24,7 @@ const benefits = [
   },
   {
     icon: Shield,
-    title: 'Garantía 24 meses',
+    title: 'Garantía hasta 36 meses',
     description: 'Todos nuestros coches con garantía total'
   },
   {
@@ -35,8 +35,50 @@ const benefits = [
 ];
 
 export default function Benefits() {
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            // Add delay based on card index for sequential animation
+            setTimeout(() => {
+              entry.target.classList.add('animate-in');
+            }, index * 200); // 200ms delay between each card
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -10% 0px'
+      }
+    );
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="py-20 bg-gray-50">
+      <style>
+        {`
+          .benefit-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+
+          .benefit-card.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        `}
+      </style>
+
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Ventajas exclusivas para afectados por la DANA
@@ -45,7 +87,8 @@ export default function Benefits() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              ref={el => cardsRef.current[index] = el}
+              className="benefit-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center gap-4">
                 <div className="bg-[#66D1FF]/10 p-3 rounded-lg">

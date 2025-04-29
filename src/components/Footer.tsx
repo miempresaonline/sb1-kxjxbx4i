@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -19,34 +19,52 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-[#66D1FF]" />
-                <a href="tel:+34900000000" className="hover:text-[#66D1FF] transition-colors">
-                  900 000 000
+                <a href="tel:+34960320009" className="hover:text-[#66D1FF] transition-colors">
+                  96 032 0009
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-[#66D1FF]" />
-                <a href="mailto:info@syamotor.es" className="hover:text-[#66D1FF] transition-colors">
-                  info@syamotor.es
+                <a href="mailto:solicitudweb@syamotor.es" className="hover:text-[#66D1FF] transition-colors">
+                  solicitudweb@syamotor.es
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-[#66D1FF]" />
-                <span>Av. Principal, 123, Valencia</span>
+                <span>Camino de la Cebolla nº 1 46138 Rafelbuñol</span>
               </li>
             </ul>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Horario</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Lunes a Viernes: 9:00 - 20:00</li>
-              <li>Sábados: 10:00 - 14:00</li>
-              <li>Domingos: Cerrado</li>
+              <li>Lunes a Viernes:</li>
+              <li>Mañanas: 9:00 - 14:00</li>
+              <li>Tardes: 15:30 - 20:00 </li>
+              
             </ul>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Síguenos</h3>
             <div className="flex gap-4">
-              {/* Aquí irían los iconos de redes sociales */}
+              <a 
+                href="https://www.facebook.com/SYAmotorFord/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#1877F2] p-2 rounded-lg hover:bg-[#1877F2]/80 transition-colors"
+                aria-label="Síguenos en Facebook"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.instagram.com/syamotorford/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#E4405F] p-2 rounded-lg hover:bg-[#E4405F]/80 transition-colors"
+                aria-label="Síguenos en Instagram"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
             </div>
           </div>
         </div>
@@ -54,16 +72,6 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Syamotor. Todos los derechos reservados.</p>
         </div>
       </div>
-      
-      {/* Botón flotante de WhatsApp */}
-      <a
-        href="https://wa.me/34900000000"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20BD5C] transition-colors"
-      >
-        <MessageCircle className="w-6 h-6" />
-      </a>
     </footer>
   );
 }

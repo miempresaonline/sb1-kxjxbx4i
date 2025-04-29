@@ -2,6 +2,13 @@ import React from 'react';
 import { Car, PhoneCall } from 'lucide-react';
 
 export default function Header() {
+  const scrollToForm = () => {
+    const formSection = document.getElementById('contact-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="relative bg-gradient-to-r from-[#66D1FF] to-[#3BA3DB] text-white py-20 overflow-hidden">
       <div className="absolute inset-0 bg-black/10"></div>
@@ -19,14 +26,19 @@ export default function Header() {
             Coches nuevos, de ocasión y Km 0 con ayudas DANA de hasta 10.000€
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#66D1FF] px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2">
+            <button 
+              onClick={scrollToForm}
+              className="bg-white text-[#66D1FF] px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
+            >
               <Car className="w-5 h-5" />
               Solicita tu ayuda ahora
             </button>
-            <button className="bg-transparent border-2 border-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
-              <PhoneCall className="w-5 h-5" />
-              Llámanos ahora
-            </button>
+            <a href="tel:960320009">
+  <button className="bg-transparent border-2 border-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+    <PhoneCall className="w-5 h-5" />
+    Llámanos ahora
+  </button>
+</a>
           </div>
         </div>
       </div>

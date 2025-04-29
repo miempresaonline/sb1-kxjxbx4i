@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Header from './components/Header';
 import Benefits from './components/Benefits';
-import CarList from './components/CarList';
+import DualVideoSection from './components/DualVideoSection';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
 function App() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [selectedCarModel, setSelectedCarModel] = React.useState<string>('');
+
+  const scrollToForm = (carModel: string) => {
+    setSelectedCarModel(carModel);
+    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <Benefits />
-      <CarList />
-      <ContactForm />
+      <ContactForm ref={formRef} initialCarModel={selectedCarModel} />
+      <DualVideoSection />
+     
+      
       <Footer />
     </div>
   );
