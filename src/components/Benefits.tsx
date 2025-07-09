@@ -4,33 +4,33 @@ import { Award, Ban as Bank, Clock, Shield, ThumbsUp, Truck } from 'lucide-react
 const benefits = [
   {
     icon: Award,
-    title: 'Ayudas DANA hasta 10.000€',
-    description: 'Gestión completa de todas las ayudas disponibles'
+    title: 'Tratamos con personas',
+    description: 'En SYA Motor no eres una matrícula más'
   },
   {
     icon: ThumbsUp,
-    title: 'Plan Reinicia Auto+',
-    description: 'Concesionario adherido al plan del Gobierno'
+    title: 'Bono regalo 600€',
+    description: 'Para el mantenimiento del taller'
   },
   {
     icon: Truck,
-    title: 'Entrega inmediata',
-    description: 'Disponibilidad garantizada de vehículos'
+    title: 'Todos los coches revisados',
+    description: 'En nuestro taller propio en Valencia'
   },
   {
     icon: Bank,
-    title: 'Financiación flexible',
-    description: 'Opciones adaptadas a tus necesidades'
+    title: 'Prueba el coche que te gusta',
+    description: 'Te dejamos probar el coche sin compromiso'
   },
   {
     icon: Shield,
-    title: 'Garantía hasta 36 meses',
+    title: 'Revisión oficial',
     description: 'Todos nuestros coches con garantía total'
   },
   {
     icon: Clock,
-    title: 'Atención inmediata',
-    description: 'Respuesta y gestión en 24 horas'
+    title: 'En Valencia con taller propio',
+    description: 'Muy cerca de ti para atenderte personalmente'
   }
 ];
 
@@ -81,7 +81,7 @@ export default function Benefits() {
 
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Ventajas exclusivas para afectados por la DANA
+        SOLO este mes regalo un bono de 600€ para mantenimiento de taller
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (

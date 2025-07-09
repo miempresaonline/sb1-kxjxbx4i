@@ -15,15 +15,15 @@ export default function Header() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex justify-center mb-8">
           <div className="text-5xl font-bold tracking-tight">
-            <span className="text-white">SYA</span>
+            <span className="text-white">SYA MOTOR</span>
           </div>
         </div>
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            ¡Recupera tu movilidad con Syamotor!
+           Concesionario de Ocasión en Valencia
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-100">
-            Coches nuevos, de ocasión y Km 0 con ayudas DANA de hasta 10.000€
+            Todos nuestros coches son GARANTIZADOS, REVISADOS Y CERTIFICADOS 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
@@ -31,12 +31,12 @@ export default function Header() {
               className="bg-white text-[#66D1FF] px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
             >
               <Car className="w-5 h-5" />
-              Solicita tu ayuda ahora
+              Ven y prueba tu coche sin compromiso
             </button>
             <a href="tel:960320009">
   <button className="bg-transparent border-2 border-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
     <PhoneCall className="w-5 h-5" />
-    Llámanos ahora
+   Hasta 24 meses de garantía
   </button>
 </a>
           </div>

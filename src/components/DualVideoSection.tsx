@@ -91,31 +91,31 @@ interface Video {
 
 const videos: Video[] = [
   {
-    url: "https://www.youtube.com/shorts/OEdVx1lVgsY",
-    thumbnailId: "OEdVx1lVgsY",
-    title: "SIN LETRA PEQUEÑA",
-    description: "Conoce nuestra historia y compromiso con los afectados por la DANA",
+    url: "https://www.youtube.com/shorts/AIW2O8qL2G8",
+    thumbnailId: "AIW2O8qL2G8",
+    title: "TRATO PERSONALIZADO",
+    description: "No eres una matricula más, eres una persona.",
     isShort: true
   },
   {
-    url: "https://www.youtube.com/shorts/oapSx5cj4DQ",
-    thumbnailId: "oapSx5cj4DQ",
-    title: "GESTIONAMOS AYUDA",
-    description: "Te explicamos cómo gestionamos las ayudas DANA paso a paso",
+    url: "https://www.youtube.com/shorts/hNSRcApHA2A",
+    thumbnailId: "hNSRcApHA2A",
+    title: "TE LO DEJAMOS PROBAR",
+    description: "Taller propio oficial y multimarca.",
     isShort: true
   },
   {
-    url: "https://www.youtube.com/shorts/4Helcc5tyCo",
-    thumbnailId: "4Helcc5tyCo",
-    title: "FINANCIACIÓN",
-    description: "Te ayudamos con la financiación",
+    url: "https://www.youtube.com/shorts/3HBhxTG3f9s",
+    thumbnailId: "3HBhxTG3f9s",
+    title: "VEHÍCULOS SELECCIONADOS",
+    description: "Garantía como si fuera nuevo.",
     isShort: true
   },
   {
-    url: "https://www.youtube.com/shorts/mK3b05czPoc",
-    thumbnailId: "mK3b05czPoc",
-    title: "GARANTÍA",
-    description: "Total durante 12 meses",
+    url: "https://www.youtube.com/shorts/5ugf3V8sdpw",
+    thumbnailId: "5ugf3V8sdpw",
+    title: "COMO NUEVO",
+    description: "Vehículos revisados y garantizados como su fuese nuevo",
     isShort: true
   }
 ];
@@ -153,10 +153,10 @@ export default function DualVideoSection() {
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#66D1FF] to-[#3BA3DB]">
-          Descubre cómo podemos ayudarte
+          No eres una matrícula más
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Conoce más sobre nosotros a través de nuestros vídeos
+          Nuestro personal te asesora para encontrar el mejor vehículo para ti.
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
